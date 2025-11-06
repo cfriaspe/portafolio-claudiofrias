@@ -1,0 +1,409 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #00473F;
+  scroll-behavior: smooth;
+}
+
+/* HOME */
+#home {
+  height: 70vh;
+  background: linear-gradient(135deg, #5CFFEC, #328FCD, #7B3C96);
+  color: white;
+  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+/* Ajustes responsivos de altura */
+@media (max-width: 768px) {
+  #home {
+    height: 100vh; /* pantallas pequeñas = alto completo */
+  }
+}
+
+@media (min-width: 769px) {
+  #home {
+    height: 70vh; /* pantallas grandes = más angosto */
+  }
+}
+
+/* Responsive ajustes */
+@media (max-width: 768px) {
+  #home h1 { font-size: 1.8rem; }
+  #home h3 { font-size: 1.1rem; }
+}
+
+.about-icon {
+  animation: spinBorder 2s linear infinite;
+  background-size: 300% 300%;
+}
+
+@keyframes spinBorder {
+  0% { background-position: 0% 40%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 40%; }
+}
+
+
+/* NAVBAR */
+.navbar .nav-link {
+  color: #00473F !important;
+  font-weight: 500;
+}
+.navbar .nav-link:hover {
+  color: #00D1B9 !important;
+}
+
+/* SOBRE MÍ */
+/*.about-icon {
+  width: 150px;
+  height: 150px;
+  background: #57A3D6;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+*/
+/* SOBRE MÍ con borde degradado */
+.about-icon {
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(135deg, #00D1B9, #7B3C96);
+  padding: 4px; /* grosor del borde */
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  overflow: hidden;
+}
+
+/* Imagen dentro del borde */
+.about-icon img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* ==== PORTAFOLIO === */
+.portfolio-card {
+  background: white;
+  border: none;
+  border-radius: 18px;
+  padding: 5px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.portfolio-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Borde degradado exterior */
+.border-gradient {
+  background: linear-gradient(135deg, #00D1B9, #328FCD, #7B3C96);
+  padding: 3px;
+  border-radius: 18px;
+}
+
+/* Interior blanco de la tarjeta */
+.border-gradient .card-body {
+  background-color: white;
+  border-radius: 15px;
+  height: 100%;
+  padding: 25px;
+}
+
+/* Botones personalizados */
+.portfolio-card .btn-outline-primary {
+  border-color: #00D1B9;
+  color: #00473F;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.portfolio-card .btn-outline-primary:hover {
+  background-color: #00D1B9;
+  color: white;
+}
+
+/* Animación del borde degradado */
+.border-gradient {
+  background: linear-gradient(135deg, #00D1B9, #328FCD, #7B3C96);
+  background-size: 300% 300%;
+  padding: 3px;
+  border-radius: 18px;
+  animation: moveGradient 2s ease-in-out infinite;
+}
+
+/* Animación suave del movimiento del degradado */
+@keyframes moveGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ==== EFECTO GLOW SOLO EN BOTONES DE LAS TARJETAS ==== */
+.portfolio-card .btn-outline-primary {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  border-color: #00D1B9;
+  color: #00473F;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+/* Efecto al pasar el cursor */
+.portfolio-card .btn-outline-primary:hover {
+  background-color: #00D1B9;
+  color: white;
+  box-shadow: 0 0 12px rgba(31, 224, 186, 0.6),
+              0 0 25px rgba(87, 163, 214, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Capa de brillo radial */
+.portfolio-card .btn-outline-primary::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(87,163,214,0.25) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+}
+
+/* Brillo visible al hacer hover */
+.portfolio-card .btn-outline-primary:hover::after {
+  opacity: 1;
+}
+
+
+/* FOOTER */
+footer {
+  background-color: #00473F;
+  color: white;
+}
+
+/* ==== BOTONES GENERALES (Home) ==== */
+#home .btn-outline-primary,
+#home .btn-outline-primary:hover,
+#home .btn-outline-primary:focus {
+  border-color: #00D1B9;
+  color: #00D1B9;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  background-color: transparent;
+}
+
+#home .btn-outline-primary:hover {
+  background-color: #00D1B9;
+  color: white;
+}
+
+/* Si también quieres un botón sólido con hover */
+#home .btn-primary {
+  background-color: #00D1B9;
+  border: none;
+  color: white;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+#home .btn-primary:hover {
+  background-color: #57A3D6;
+  color: white;
+}
+
+/* ==== EFECTO GLOW PARA BOTONES DEL HOME ==== */
+#home .btn-outline-primary,
+#home .btn-primary {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Efecto hover con brillo */
+#home .btn-outline-primary:hover,
+#home .btn-primary:hover {
+  box-shadow: 0 0 15px #00D1B9, 0 0 25px #57A3D6;
+  transform: translateY(-2px);
+}
+
+/* Animación suave del brillo */
+#home .btn-outline-primary::after,
+#home .btn-primary::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(87,163,214,0.3) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: -1;
+}
+
+#home .btn-outline-primary:hover::after,
+#home .btn-primary:hover::after {
+  opacity: 1;
+}
+
+/* ==== IMAGEN DE DASHBOARD MOCKUP ==== */
+.dashboard-img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 15px 15px 0 0;
+  transition: transform 0.4s ease, opacity 0.4s ease;
+}
+
+/* Efecto suave al pasar el mouse */
+.portfolio-card:hover .dashboard-img {
+  transform: scale(1.05);
+  opacity: 0.95;
+}
+
+
+/* ==== EXPERIENCIA & HABILIDADES ==== */
+#skills {
+  background: #f8f9fa;
+  color: #00473F;
+}
+
+/* Timeline (trayectoria) */
+.timeline {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+
+.timeline li {
+  padding-left: 25px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.timeline li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 10px;
+  height: 10px;
+  background: linear-gradient(135deg, #00D1B9, #7B3C96);
+  border-radius: 50%;
+}
+
+/* Skills (barras animadas) */
+.skill {
+  margin-bottom: 25px;
+}
+
+.skill span {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #00473F;
+}
+
+.progress {
+  height: 10px;
+  background-color: #eaeaea;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #00D1B9, #328FCD, #7B3C96);
+  background-size: 200% 200%;
+  animation: progressGlow 4s ease-in-out infinite;
+  border-radius: 10px;
+}
+
+/* Animación del degradado */
+@keyframes progressGlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ==== ÍCONOS DE HABILIDADES ==== */
+.skill-icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  color: white;
+  background: linear-gradient(135deg, #00D1B9, #7B3C96);
+  box-shadow: 0 0 12px rgba(0, 209, 185, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto al pasar el mouse */
+.skill-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 18px rgba(0, 209, 185, 0.6), 0 0 25px rgba(87, 163, 214, 0.4);
+}
+
+
+/* ==== CONTACTO ==== */
+#contact {
+  background-color: #f8f9fa;
+}
+
+.contact-card {
+  background: white;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+.contact-icon {
+  width: 55px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  color: white;
+  background: linear-gradient(135deg, #00D1B9, #7B3C96);
+  box-shadow: 0 0 12px rgba(0, 209, 185, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 18px rgba(0, 209, 185, 0.6), 0 0 25px rgba(87, 163, 214, 0.4);
+}
+
+/* Botón CV con efecto glow */
+.btn-glow {
+  margin-top: 10px;
+  padding: 10px 25px;
+  border-color: #00D1B9;
+  color: #00473F;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-glow:hover {
+  background-color: #00D1B9;
+  color: white;
+  box-shadow: 0 0 15px #00D1B9, 0 0 25px #57A3D6;
+  transform: translateY(-2px);
+}
+
+
+
+
+
