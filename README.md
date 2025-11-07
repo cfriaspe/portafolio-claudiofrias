@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://cfriaspe.github.io/portafolio-claudiofrias/assets/img/banner_portafolio.jpg" alt="Banner Claudio Frías" width="100%">
+</p>
+
 # 🌐 Portafolio Profesional — Claudio Frías
 
 Bienvenido a mi portafolio personal.  
@@ -47,4 +51,10 @@ Puedes ver el sitio en vivo aquí 👉
 
 ## 📫 Contacto
 - ✉️ **Email:** [friasclaudio19@gmail.com](mailto:friasclaudio19@gmail.com)  
-- 💼 **LinkedIn:** [https://www.linkedin.com/in/claudio-frias-9a89116a/]
+- 💼 **LinkedIn:** [linkedin.com/in/claudio-frias-9a89116a](https://www.linkedin.com/in/claudio-frias-9a89116a/)  
+- 📊 **Power BI Projects:** [Google Drive](https://drive.google.com/)  
+- 📄 **CV:** [Descargar PDF](https://cfriaspe.github.io/portafolio-claudiofrias/assets/docs/CV_ClaudioFrias.pdf)
+
+---
+
+🧩 *Este proyecto es de carácter personal y educativo. Todos los dashboards son representaciones visuales basadas en datos anonimizados o ejemplos inspirados en proyectos reales desarrollados para Movistar Chile.*
