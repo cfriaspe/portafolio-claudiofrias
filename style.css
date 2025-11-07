@@ -386,22 +386,123 @@ footer {
   box-shadow: 0 0 18px rgba(0, 209, 185, 0.6), 0 0 25px rgba(87, 163, 214, 0.4);
 }
 
-/* Botón CV con efecto glow */
-.btn-glow {
-  margin-top: 10px;
-  padding: 10px 25px;
-  border-color: #00D1B9;
+/* ==== BOTÓN DESCARGA CV ==== */
+.btn-download {
+  border: 2px solid #00D1B9;
   color: #00473F;
-  font-weight: 500;
+  font-weight: 600;
+  border-radius: 12px;
   transition: all 0.3s ease;
+  padding: 10px 25px;
+  font-size: 1rem;
 }
 
-.btn-glow:hover {
-  background-color: #00D1B9;
+.btn-download:hover {
+  background: linear-gradient(90deg, #00D1B9, #57A3D6);
   color: white;
-  box-shadow: 0 0 15px #00D1B9, 0 0 25px #57A3D6;
-  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(0, 209, 185, 0.4);
+  transform: translateY(-3px);
 }
+
+
+/* ==== FORMULARIO DE CONTACTO ==== */
+.contact-form {
+  background: white;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.contact-form .form-label {
+  color: #00473F;
+  font-weight: 500;
+}
+
+.contact-form .form-control {
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  padding: 10px 12px;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form .form-control:focus {
+  border-color: #00D1B9;
+  box-shadow: 0 0 6px rgba(0,209,185,0.3);
+}
+
+/* ==== SCROLL SUAVE ENTRE SECCIONES ==== */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ==== ANIMACIÓN FADE-UP PARA BOTONES HOME ==== */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#home .btn-glow,
+#home .btn-download {
+  opacity: 0;
+  animation: fadeUp 0.9s ease forwards;
+}
+
+/* Retrasos para que aparezcan uno tras otro */
+#home .btn-glow:nth-child(1) {
+  animation-delay: 0.2s;
+}
+
+#home .btn-glow:nth-child(2) {
+  animation-delay: 0.4s;
+}
+
+#home .btn-download {
+  animation-delay: 0.6s;
+}
+
+
+/* ==== ANIMACIÓN PARA TARJETAS DE PORTAFOLIO ==== */
+@keyframes fadeUpCard {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estado inicial: invisibles (hasta que se haga visible) */
+.card.portfolio-card {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Cuando el script las detecta, se activa la animación */
+.card.portfolio-card.visible {
+  animation: fadeUpCard 0.8s ease forwards;
+}
+
+
+.card.portfolio-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.card.portfolio-card:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.card.portfolio-card:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+
 
 
 
