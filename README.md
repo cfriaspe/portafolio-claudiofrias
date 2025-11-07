@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://cfriaspe.github.io/portafolio-claudiofrias/assets/img/banner_portafolio.jpg" alt="Banner Claudio Frías" width="100%">
+  <img src="https://github.com/cfriaspe/portafolio-claudiofrias/blob/main/imagen/Banner%20portafolio.png" alt="Banner Claudio Frías" width="100%">
 </p>
 
 # 🌐 Portafolio Profesional — Claudio Frías
