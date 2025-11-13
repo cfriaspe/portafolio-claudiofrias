@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard BillHelp | Claudio Frías</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body class="proyecto-bg">
+
+  <!-- ==== BANNER SUPERIOR BILLHELP ==== -->
+<section id="banner-billhelp" class="text-center">
+  <div class="banner-content">
+    <img src="imagen/Global/ChatGPT Image 12 nov 2025, 12_35_50.png" alt="Logo Claudio Frías" class="banner-logo mb-3">
+    <h1 class="fw-bold">Dashboard BillHelp</h1>
+    <p class="lead">
+      Análisis de adopción y uso de la herramienta <strong>BillHelp</strong> a nivel de canal, proveedor y plataforma.
+    </p>
+    <p class="text-center mb-5"> 
+      <b>
+      Este dashboard analiza la adopción y uso de la herramienta <i> BillHelp </i> a nivel de canal, Proveedores y Plataformas de atención.
+      Incluye indicadores de interacción, evolución mensual, niveles de uso y distribución por ejecutivos,
+      facilitando la toma de decisiones en base al comportamiento real de uso.
+      </b>
+    </p>
+    <div class="banner-line"></div>
+  </div>
+</section>
+
+<!-- NAVBAR BillHelp 
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background: rgba(12,26,26,0.95); backdrop-filter: blur(6px);">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center" href="index.html#home">
+      <img src="imagen/Global/ChatGPT Image 12 nov 2025, 12_35_50.png" alt="Logo Claudio Frías" class="logo-nav me-2">
+      
+    </a>
+
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link text-light" href="index.html#about">Sobre mí</a></li>
+        <li class="nav-item"><a class="nav-link text-light" href="index.html#portfolio">Portafolio</a></li>
+        <li class="nav-item"><a class="nav-link text-light" href="index.html#contact">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>-->
+
+
+  <section id="billhelp" class="container py-5">
+    <h1 class="fw-bold text-center mb-4">Del dato al insight: visualizando el uso real de BillHelp</h1>
+    <!-- <p class="text-center mb-5"> 
+      <b>
+      Este dashboard analiza la adopción y uso de la herramienta <i> BillHelp </i> a nivel de canal, Proveedores y Plataformas de atención.
+      Incluye indicadores de interacción, evolución mensual, niveles de uso y distribución por ejecutivos,
+      facilitando la toma de decisiones en base al comportamiento real de uso.
+      </b>
+    </p> -->
+
+        <!-- Galería -->
+    <div class="gallery-container">
+
+      <div class="gallery-section" gallery-img>
+        <h3 data-number="01">Medidas DAX y cálculos complejos</h3>
+        <img src="imagen/BillHelp/Formulas avanzadas.png" class="gallery-img">
+      </div>
+
+      <div class="gallery-section">
+        <h3 data-number="02">Principales indicadores y Filtros</h3>
+        <img src="imagen/BillHelp/KPI Tarjetas segmentadores.png" class="gallery-img">
+      </div>
+
+      <div class="gallery-section">
+        <h3 data-number="03">Indicadores de adopción y uso</h3>
+        <img src="imagen/BillHelp/adopcion y uso.png" class="gallery-img">
+      </div>
+
+      <div class="gallery-section">
+        <h3 data-number="04">Visualizaciones complementarias</h3>
+        <img src="imagen/BillHelp/Graficos y tabla detalle.png" class="gallery-img">
+      </div>
+
+    </div>
+
+
+    <div class="text-center mt-5">
+      <a href="index.html#portfolio" class="btn-glow">
+        <span> Volver al Portafolio</span>
+      </a>
+    </div>
+
+  </section>
+  <!-- ==== SCRIPT LIGHTBOX ==== -->
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const images = document.querySelectorAll(".gallery-img");
+    const lightbox = document.createElement("div");
+    const closeBtn = document.createElement("span");
+    const lightboxImg = document.createElement("img");
+
+    lightbox.classList.add("lightbox");
+    closeBtn.classList.add("lightbox-close");
+    closeBtn.innerHTML = "&times;"; // símbolo X
+    lightbox.appendChild(lightboxImg);
+    lightbox.appendChild(closeBtn);
+    document.body.appendChild(lightbox);
+
+    images.forEach(img => {
+      img.addEventListener("click", () => {
+        lightboxImg.src = img.src;
+        lightbox.classList.add("show");
+      });
+    });
+
+    closeBtn.addEventListener("click", () => {
+      lightbox.classList.remove("show");
+    });
+
+    // Cerrar al hacer clic fuera de la imagen
+    lightbox.addEventListener("click", e => {
+      if (e.target === lightbox) lightbox.classList.remove("show");
+    });
+  });
+</script>
+
+</body>
+</html>

@@ -11,7 +11,6 @@
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const cards = document.querySelectorAll('.card.portfolio-card');
-
       const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
@@ -19,21 +18,21 @@
           }
         });
       }, { threshold: 0.2 }); // activa cuando 20% es visible
-
       cards.forEach(card => observer.observe(card));
     });
   </script>
 
-
-
-
 </head>
 
 <body>
+  
   <!-- NAVBAR -->
   <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm fixed-top">
     <div class="container">
-      <a class="navbar-brand fw-bold text-primary" href="#home">Claudio Frías</a>
+      <a class="navbar-brand d-flex align-items-center" href="#home">
+        <img src="imagen/Global/ChatGPT Image 12 nov 2025, 12_35_50.png" alt="Logo Claudio Frías" class="logo-nav me-2">
+      </a>
+
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -59,33 +58,34 @@
   <a href="#contact" class="btn btn-outline-primary btn-glow">
     <i class="bi bi-chat-dots me-2"></i>Contáctame
   </a>
-  <a href="doc/CV_ClaudioFrias.pdf" target="_blank" class="btn btn-outline-primary btn-download">
-    <i class="bi bi-file-earmark-person me-2"></i>Descargar CV
+  <a href="doc/CV_ClaudioFrias.pdf" target="_blank" class="btn btn-outline-primary btn-glow">
+  <i class="bi bi-file-earmark-person me-2"></i>Descargar CV
   </a>
+
 </div>
 
     </div>
   </section>
 
   <!-- SOBRE MÍ -->
-  <section id="about" class="py-5 bg-light">
+  <section id="about" class="py-5 bg-light" data-aos="fade-up">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-md-6 mb-4 mb-md-0">
           <h2 class="fw-bold mb-3">Sobre mí</h2>
           <p>
-            Analista de Datos con experiencia en desarrollo de dashboards interactivos en Power BI,
-            integración de fuentes múltiples (SAIP, BillHelp, FCR, etc.) y optimización de procesos
-            de capacitación online en Movistar Chile.  
-          </p>
-          <p>
-            Apasionado por el diseño de reportes dinámicos, la automatización con SQL y Excel avanzado, 
-            y la creación de visuales intuitivas que transforman datos en decisiones estratégicas.
+            Soy Analista de Datos enfocado en crear dashboards modernos, funcionales e interactivos, integrando información desde 
+            diversas fuentes y optimizando flujos mediante Power Query, SQL y automatización en Excel.Cuento con experiencia en el
+            desarrollo de reportes estratégicos, análisis de información operativa y modelamiento de datos para apoyar la toma de
+            decisiones. Me especializo en Power BI, SQL, Excel avanzado, Access, y el manejo de archivos dinámicos (CSV, JSON y Excel), construyendo modelos consistentes y automatizados.
+            Apasionado por el diseño de visuales intuitivas, la creación de informes claros y estandarizados, y la optimización de
+            procesos mediante ETL. Disfruto transformar datos complejos en información accesible, visual y accionable, siempre
+            con enfoque en mejorar la experiencia del usuario final.
           </p>
         </div>
         <div class="col-md-6 text-center">
             <div class="about-icon rounded-circle overflow-hidden d-inline-flex align-items-center justify-content-center">
-                <img src="imagen/Sobre Mi.png" alt="Claudio Frías" class="img-fluid">
+                <img src="imagen/Global/ChatGPT Image 12 nov 2025, 12_35_50.png" alt="Claudio Frías" class="img-fluid">
             </div>
           
         </div>
@@ -94,41 +94,31 @@
   </section>
 
   <!-- PORTAFOLIO -->
-  <section id="portfolio" class="py-5">
-  <div class="container text-center">
-    <h2 class="fw-bold mb-5">Portafolio</h2>
+  <section id="portfolio" class="py-5" data-aos="fade-up">
+    <div class="container text-center">
+      <h2 class="fw-bold mb-5">Portafolio</h2>
     <div class="row g-4">
       <!-- Proyecto 1 -->
-<div class="col-md-4">
-    <div class="card portfolio-card h-100 border-gradient">
+    <div class="col-md-4">
+      <div class="card portfolio-card h-100 border-gradient">
         <div class="card-body p-0 overflow-hidden">
-        <!-- Imagen representativa del dashboard -->
-            <img src="imagen/Portada BillHelp.png" 
-            alt="Dashboard BillHelp" 
-            class="dashboard-img">
+          <!-- Imagen representativa del dashboard -->
+          <img src="imagen/Global/Portada BillHelp.png" alt="Dashboard BillHelp" class="dashboard-img">
             <div class="p-3 text-start">
-            <h5 class="fw-bold">Dashboard BillHelp</h5>
-            <p class="card-text">
-            Análisis del uso real de la herramienta BillHelp por canal, PCRC y zona.
-            Este reporte fue diseñado para evaluar la adopción y frecuencia de uso 
-            de la herramienta de soporte digital.
-            </p>
-            <a href="https://app.powerbi.com/groups/me/reports/e638afb1-24f0-475b-8514-5c7edd107efd/c60430c003eae15748bd?experience=power-bi" 
-            target="_blank" 
-           class="btn btn-outline-primary">
-          Ver en Google Drive
-        </a>
+              <h5 class="fw-bold">Dashboard BillHelp</h5>
+              <p class="card-text"> Análisis del uso real de la herramienta BillHelp por canal, PCRC y zona.Este reporte fue diseñado para evaluar la adopción y frecuencia de uso de la herramienta de soporte digital.</p>
+              <a href="billhelp.html" target="_blank" class="btn btn-outline-primary">Ver Proyecto</a>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</div>
 
       <!-- Proyecto 2 -->
 <div class="col-md-4">
     <div class="card portfolio-card h-100 border-gradient">
         <div class="card-body p-0 overflow-hidden">
         <!-- Imagen representativa del dashboard -->
-            <img src="imagen/Portada Cuartiles.png" 
+            <img src="imagen/Global/Portada Cuartiles.png" 
             alt="Dashboard Cuartiles" 
             class="dashboard-img">
             <div class="p-3 text-start">
@@ -138,10 +128,10 @@
              segmentada por cuartiles de rendimiento. Facilita la identificación de brechas, patrones de mejora y la evolución del
               indicador en el tiempo por canal, PCRC y PSIC.
             </p>
-            <a href="https://drive.google.com/drive/folders/1SeLvsRILWJGcGpD3bI1XhOQm8kNJJ4So" 
+            <a href="Cuartiles.html" 
             target="_blank" 
            class="btn btn-outline-primary">
-          Ver en Google Drive
+          Ver Proyecto
         </a>
       </div>
     </div>
@@ -152,7 +142,7 @@
     <div class="card portfolio-card h-100 border-gradient">
         <div class="card-body p-0 overflow-hidden">
         <!-- Imagen representativa del dashboard -->
-            <img src="imagen/Portada Capacitacion.png" 
+            <img src="imagen/Global/Portada Capacitacion.png" 
             alt="Dashboard Capacitacion Online" 
             class="dashboard-img">
             <div class="p-3 text-start">
@@ -162,10 +152,10 @@
             cursos online desplegados por canal. Permite analizar tasas de rendición, aprobaciones, reprobaciones y
              usuarios sin rendir, facilitando la gestión del avance y cumplimiento de los programas de capacitación.
             </p>
-            <a href="https://drive.google.com/file/d/1pytt3tOajIzJjqKcVKJQwLy15V7RaYrX/view?usp=drive_link" 
+            <a href="induccion sucursal.html" 
             target="_blank" 
            class="btn btn-outline-primary">
-          Ver en Google Drive
+          Ver Proyecto
         </a>
       </div>
     </div>
@@ -175,106 +165,150 @@
 
 
 <!-- EXPERIENCIA & HABILIDADES -->
-<section id="skills" class="py-5 bg-light">
+<section id="skills" class="py-5 bg-light" data-aos="fade-up">
   <div class="container">
-    <div class="text-center mb-5">
-      <h2 class="fw-bold">Experiencia & Habilidades</h2>
-      <p class="text-muted">Una mirada a mi recorrido profesional y las herramientas que utilizo día a día para transformar datos en decisiones.</p>
-    </div>
-
-    <div class="row align-items-start">
-      <!-- Columna Izquierda: Experiencia -->
-      <div class="col-md-6 mb-5 mb-md-0">
-        <h4 class="fw-bold mb-4 text-start">Trayectoria Profesional</h4>
-        <ul class="timeline">
-          <li>
-            <strong>Movistar Chile</strong> — Especialista en Análisis de Datos y Capacitación Online<br>
-            <small>2020 - Actualidad</small><br>
-            <span class="text-muted">Desarrollo de dashboards corporativos en Power BI integrando múltiples fuentes (SAIP, BillHelp, FCR, Ventas y Capacitación Online). Diseño de reportes interactivos y automatización de procesos de análisis.</span>
-          </li>
-          <li>
-            <strong>Freelance</strong> — Consultor en Reporting y Visualización de Datos<br>
-            <small>2018 - 2020</small><br>
-            <span class="text-muted">Creación de tableros personalizados para pymes y profesionales. Implementación de análisis automatizados con Excel avanzado y Power Query.</span>
-          </li>
-          <li>
-            <strong>Formación Académica</strong> — SQL, Oracle, Power BI, Excel Avanzado, Visualización de Datos<br>
-            <small>2015 - 2018</small>
-          </li>
-        </ul>
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Experiencia & Habilidades</h2>
+        <p class="text-muted">Una mirada a mi recorrido profesional y las herramientas que utilizo día a día para transformar datos en decisiones.</p>
       </div>
 
+      <div class="row align-items-start">
+        <!-- Columna Izquierda: Experiencia -->
+          <div class="col-md-6 mb-5 mb-md-0">
+            <h4 class="fw-bold mb-4 text-start">Trayectoria Profesional</h4>
+            <ul class="timeline">
+              <li>
+                <strong>Movistar Chile</strong> — Especialista en Análisis de Datos y Capacitación Online<br>
+                <small>2020 - Actualidad</small><br>
+                <span class="text-muted">Desarrollo de dashboards corporativos en Power BI integrando múltiples fuentes (SAIP, BillHelp, FCR, Ventas y Capacitación Online). Diseño de reportes interactivos y automatización de procesos de análisis.</span>
+              </li>
+              <li>
+                <strong>Freelance</strong> — Consultor en Reporting y Visualización de Datos<br>
+                <small>2018 - 2020</small><br>
+                <span class="text-muted">Creación de tableros personalizados para pymes y profesionales. Implementación de análisis automatizados con Excel avanzado y Power Query.</span>
+              </li>
+              <li>
+                <strong>Formación Académica</strong> — SQL, Oracle, Power BI, Excel Avanzado, Visualización de Datos<br>
+                <small>2015 - 2018</small>
+              </li>
+            </ul>
+          </div>
 
-    
-        <!-- Columna Derecha: Habilidades -->
-        <div class="col-md-6">
-            <h4 class="fw-bold mb-4 text-start">Competencias Técnicas</h4>
-            <!-- Excel Avanzado -->
-            <div class="skill d-flex align-items-center mb-4">
+            <!-- Columna Derecha: Habilidades -->
+            <div class="col-md-6"> <h4 class="fw-bold mb-4 text-start">Competencias Técnicas</h4>
+              <!-- Excel Avanzado -->
+              <div class="skill d-flex align-items-center mb-4">
                 <div class="skill-icon me-3">
-                <i class="bi bi-file-earmark-spreadsheet-fill"></i>
+                    <i class="bi bi-file-earmark-spreadsheet-fill"></i>
                 </div>
                 <div class="flex-grow-1">
-                <span>Excel Avanzado</span>
+                  <span>Excel Avanzado</span>
                 <div class="progress">
                     <div class="progress-bar" style="width: 100%"></div>
                 </div>
                 </div>
+              </div>
+
+              <!-- Power BI -->
+              <div class="skill d-flex align-items-center mb-4">
+                <div class="skill-icon me-3">
+                  <i class="bi bi-bar-chart-fill"></i>
+                </div>
+                <div class="flex-grow-1"><span>Power BI</span>
+                    <div class="progress"><div class="progress-bar" style="width: 100%"></div></div>
+                </div>
+              </div>
+
+              <!-- SQL -->
+              <div class="skill d-flex align-items-center mb-4">
+                <div class="skill-icon me-3">
+                  <i class="bi bi-database-fill"></i>
+                </div>
+                <div class="flex-grow-1"><span>SQL (Oracle)</span>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 93%"></div>
+                    </div>
+                </div>
+              </div>
+
+              <!-- Modelado de Datos y Automatización -->
+              <div class="skill d-flex align-items-center mb-4">
+                <div class="skill-icon me-3">
+                  <i class="bi bi-gear-fill"></i>
+                </div>          
+                <div class="flex-grow-1"><span>Modelado de Datos y Automatización</span>
+                    <div class="progress">
+                      <div class="progress-bar" style="width: 97%"></div>
+                    </div>
+                </div>
+              </div>          
+
+              <!-- Diseño de Dashboards -->
+              <div class="skill d-flex align-items-center mb-4">
+                <div class="skill-icon me-3">
+                  <i class="bi bi-display-fill"></i>
+                </div>
+                <div class="flex-grow-1"><span>Diseño de Dashboards Interactivos</span>
+                  <div class="progress">
+                    <div class="progress-bar" style="width: 100%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        <section class="ia-section container py-5"><h3 class="fw-bold text-center mb-4">Integración de Inteligencia Artificial</h3><p class="text-center mb-5">Uso de herramientas de IA para potenciar procesos de análisis, automatización, diseño y comunicación visual.</p>
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+              <div class="ia-card">
+                <h5>🤖 ChatGPT</h5>
+                <p>Apoyo en análisis de datos, redacción técnica y generación de código.</p>
+                  <div class="progress">
+                    <div class="progress-bar" style="width: 95%"></div>
+                  </div>
+              </div>
             </div>
 
-            <!-- Power BI -->
-            <div class="skill d-flex align-items-center mb-4">
-                <div class="skill-icon me-3">
-                <i class="bi bi-bar-chart-fill"></i>
-                </div>
-                <div class="flex-grow-1">
-                <span>Power BI</span>
+            <div class="col-md-6 col-lg-4">
+              <div class="ia-card">
+                <h5>🌟 Google Gemini</h5>
+                <p>Exploración de prompts para análisis y visualización.</p>
                 <div class="progress">
                     <div class="progress-bar" style="width: 90%"></div>
-                </div>
-            </div>
-            </div>
-
-            <!-- SQL -->
-            <div class="skill d-flex align-items-center mb-4">
-                <div class="skill-icon me-3">
-                <i class="bi bi-database-fill"></i>
-                </div>
-                <div class="flex-grow-1">
-                <span>SQL (Oracle)</span>
-                <div class="progress">
-                    <div class="progress-bar" style="width: 85%"></div>
-                </div>
-                </div>
+                  </div>
+              </div>
             </div>
 
-            <!-- Modelado de Datos y Automatización -->
-            <div class="skill d-flex align-items-center mb-4">
-                <div class="skill-icon me-3">
-                <i class="bi bi-gear-fill"></i>
-                </div>          
-                <div class="flex-grow-1">
-                <span>Modelado de Datos y Automatización</span>
-                <div class="progress">
-                    <div class="progress-bar" style="width: 82%"></div>
-                </div>
-                </div>
-            </div>          
-
-            <!-- Diseño de Dashboards -->
-            <div class="skill d-flex align-items-center mb-4">
-                <div class="skill-icon me-3">
-                <i class="bi bi-display-fill"></i>
-                </div>
-                <div class="flex-grow-1">
-                <span>Diseño de Dashboards Interactivos</span>
+            <div class="col-md-6 col-lg-4">
+              <div class="ia-card">
+                <h5>🎨 Nano Banana</h5>
+                <p>Creación de imágenes y gráficos profesionales.</p>
                 <div class="progress">
                     <div class="progress-bar" style="width: 88%"></div>
-                </div>
-                </div>
+                  </div>
+              </div>
             </div>
-        </div>
-    </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="ia-card">
+                <h5>🧠 Google Studio IA</h5>
+                <p>Generación de informes automatizados y resúmenes inteligentes.</p>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 90%"></div>
+                  </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+              <div class="ia-card">
+                <h5>🎬 Sora</h5>
+                <p>Videos conceptuales y storytelling visual.</p>
+                <div class="progress">
+                    <div class="progress-bar" style="width: 80%"></div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
   </div>
 </section>
 
@@ -320,6 +354,19 @@
   <footer class="text-center py-3">
     <p class="mb-0">© 2025 Claudio Frias | Portafolio Personal</p>
   </footer>
+
+   <!-- AOS CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+  AOS.init({
+    duration: 900,
+    once: true,
+    offset: 80
+  });
+  </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>

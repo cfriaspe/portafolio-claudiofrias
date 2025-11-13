@@ -1,16 +1,23 @@
+/* ======== FONDO GENERAL ======== */
 body {
-  font-family: 'Poppins', sans-serif;
-  color: #00473F;
-  scroll-behavior: smooth;
+  font-family: "Poppins", sans-serif;
+  color: #1A1A1A;
+  background-color: #ffffff; /* fondo blanco por defecto */
 }
 
-/* HOME */
-#home {
-  height: 70vh;
-  background: linear-gradient(135deg, #5CFFEC, #328FCD, #7B3C96);
-  color: white;
-  text-shadow: 0 1px 3px rgba(0,0,0,0.3);
+/* ======== FONDO PARA PÁGINAS DE PROYECTO ======== */
+body.proyecto-bg {
+  background: linear-gradient(180deg, #0C1A1A 0%, #124B47 40%, #6ACFC7 100%);
+  background-attachment: fixed;
+  color: #EAEAEA;
 }
+
+/*Home*/
+#home {
+  background: linear-gradient(120deg, #0C1A1A 0%, #0C1A1A 50%, #6ACFC7 100%);
+  color: #FFFFFF;
+}
+
 /* Ajustes responsivos de altura */
 @media (max-width: 768px) {
   #home {
@@ -42,14 +49,27 @@ body {
 }
 
 
-/* NAVBAR */
-.navbar .nav-link {
-  color: #00473F !important;
-  font-weight: 500;
+/* ==== LOGO NAVBAR (ajustado para visibilidad) ==== */
+.logo-nav {
+  height: 60px;            /* Aumenta el tamaño del logo */
+  width: auto;
+  border-radius: 10px;
+  margin-right: 10px;      /* Espacio entre logo y texto */
+  transform: translateY(2px);
+  transition: transform 0.3s ease;
 }
-.navbar .nav-link:hover {
-  color: #00D1B9 !important;
+
+.logo-nav:hover {
+  transform: scale(1.1);
 }
+
+/* Asegura que la navbar tenga un poco más de altura */
+.navbar {
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+
 
 /* SOBRE MÍ */
 /*.about-icon {
@@ -503,8 +523,676 @@ html {
 }
 
 
+.gallery-section {
+  text-align: center;
+}
+
+.gallery-section h3 {
+  color: #00473F;
+  margin-bottom: 15px;
+}
+
+.gallery-img {
+  width: 90%;
+  max-width: 1100px;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 35px rgba(50, 143, 205, 0.4);
+}
+
+/* 🎨 ===== ESTILOS COMPLETOS BILLHELP ===== */
+
+/* 🔹 Fondo con degradado en toda la página */
+body.bg-light {
+  background: linear-gradient(180deg, #0C1A1A 0%, #0E2A2A 40%, #6ACFC7 100%);
+  background-attachment: fixed; /* mantiene el degradado al hacer scroll */
+  color: #FFFFFF;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* 🔹 Contenedor principal */
+#billhelp {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+/* 🔹 Título principal */
+#billhelp h1 {
+  color: #6ACFC7;
+  font-size: 2.3rem;
+  margin-bottom: 25px;
+}
+
+/* 🔹 Descripción introductoria */
+#billhelp p {
+  color: #EAEAEA;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  max-width: 850px;
+  margin: 0 auto 50px auto;
+}
+
+/*===== AJUSTE DE IMÁGENES EN GALERÍA ===== */
+
+.gallery-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain; /* cambia de cover a contain */
+  background-color: rgba(255, 255, 255, 0.03); /* relleno suave */
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
 
+.gallery-img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 40px rgba(106, 207, 199, 0.6);
+}
+
+/* Mantiene consistencia en pantallas pequeñas */
+@media (max-width: 768px) {
+  .gallery-container {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-img {
+    aspect-ratio: auto;
+  }
+}
+
+/* 🔹 Títulos de sección */
+.gallery-section h3 {
+  color: #6ACFC7;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+/* 🔹 Imágenes */
+.gallery-img {
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 40px rgba(106, 207, 199, 0.6);
+}
+
+/* 🔹 Botón volver con estilo moderno y efecto glow animado */
+.btn-glow {
+  position: relative;
+  display: inline-block;
+  padding: 12px 36px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #0C1A1A, #6ACFC7);
+  box-shadow: 0 0 15px rgba(106, 207, 199, 0.4);
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.35s ease;
+  text-decoration: none;
+}
+
+/* ✨ efecto de luz suave al pasar el mouse */
+.btn-glow::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.25) 0%, transparent 70%);
+  transform: scale(0);
+  transition: transform 0.5s ease;
+  z-index: 0;
+}
+
+.btn-glow:hover::before {
+  transform: scale(1);
+}
+
+.btn-glow:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 25px rgba(106, 207, 199, 0.8);
+}
+
+/* Asegurar que el texto esté sobre el brillo */
+.btn-glow span {
+  position: relative;
+  z-index: 1;
+}
+
+/* ===== FIN DE ESTILOS BILLHELP ===== */
+
+/* 🔹 Espaciado extra entre la última imagen y el botón volver */
+#billhelp .text-center {
+  margin-top: 100px; /* separa el botón de la última imagen */
+}
+
+#billhelp {
+  padding-bottom: 60px; /* agrega aire al final de la página */
+}
+
+/* ==== SECCIÓN GALLERY (con numeración profesional) ==== */
+.gallery-section {
+  position: relative;
+  text-align: center;
+  background: rgba(12, 26, 26, 0.65);
+  border-radius: 20px;
+  padding: 60px 30px;
+  margin-bottom: 70px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  backdrop-filter: blur(5px);
+  overflow: hidden;
+}
+
+.gallery-img:hover {
+  transform: scale(1.05) translateY(-5px);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.4);
+}
 
 
+/* Efecto de elevación */
+.gallery-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(106, 207, 199, 0.3);
+}
 
+/* ==== TÍTULOS CON NUMERACIÓN ==== */
+.gallery-section h3 {
+  color: #6ACFC7;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 25px;
+  display: inline-block;
+  position: relative;
+  padding-bottom: 6px;
+  border-bottom: 2px solid rgba(106, 207, 199, 0.3);
+}
+
+/* Numeración antes del título */
+.gallery-section h3::before {
+  content: attr(data-number);
+  position: absolute;
+  left: -80px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2.8rem;
+  color: rgba(106, 207, 199, 0.15);
+  font-weight: 800;
+  letter-spacing: -1px;
+  pointer-events: none;
+}
+
+/* ==== IMÁGENES ==== */
+.gallery-img {
+  width: 100%;
+  max-width: 1100px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  margin-top: 25px;
+}
+
+.gallery-img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 40px rgba(106, 207, 199, 0.5);
+}
+
+/* ==== ANIMACIÓN DE ENTRADA ==== */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.gallery-section {
+  animation: fadeUp 0.8s ease both;
+}
+
+/* ==== BANNER BILLHELP ==== */
+#banner-billhelp {
+  background: linear-gradient(180deg, #0C1A1A 0%, #0E2A2A 40%, #6ACFC7 120%);
+  color: #EAEAEA;
+  padding: 120px 20px 100px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* ==== CONTENIDO ==== */
+.banner-content {
+  max-width: 900px;
+  margin: 0 auto;
+  animation: fadeInBanner 1.2s ease both;
+}
+
+.banner-logo {
+  width: 90px;
+  height: auto;
+  margin-bottom: 10px;
+  filter: drop-shadow(0 0 6px rgba(106, 207, 199, 0.5));
+}
+
+#banner-billhelp h1 {
+  color: #6ACFC7;
+  font-size: 2.6rem;
+  letter-spacing: 1px;
+}
+
+#banner-billhelp p {
+  color: #EAEAEA;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  margin-top: 10px;
+  opacity: 0.9;
+}
+
+/* Línea decorativa */
+.banner-line {
+  width: 120px;
+  height: 4px;
+  background: #6ACFC7;
+  border-radius: 2px;
+  margin: 25px auto 0;
+  box-shadow: 0 0 12px rgba(106, 207, 199, 0.6);
+}
+
+/* ==== ANIMACIÓN ==== */
+@keyframes fadeInBanner {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==== EFECTO DE ENTRADA PARA EL TÍTULO ==== */
+h1.fw-bold {
+  opacity: 0;
+  transform: translateY(20px) scale(0.98);
+  filter: blur(4px);
+  animation: fadeInTitle 1.2s ease forwards;
+}
+
+@keyframes fadeInTitle {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+/* ==== EFECTO LIGHTBOX (ZOOM AL CLIC) ==== */
+
+/* Fondo del lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(4px);
+}
+
+/* Imagen ampliada */
+.lightbox img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 14px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.6);
+  transform: scale(0.9);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Cuando se activa */
+.lightbox.show {
+  display: flex;
+}
+
+.lightbox.show img {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* Botón de cierre */
+.lightbox-close {
+  position: absolute;
+  top: 25px;
+  right: 40px;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.lightbox-close:hover {
+  color: #6ACFC7;
+}
+
+/* ==== BANNER INDUCCIÓN SUCURSAL ==== */
+#banner-induccion {
+  background: linear-gradient(180deg, #0C1A1A 0%, #165C5C 50%, #6ACFC7 120%);
+  color: #EAEAEA;
+  padding: 120px 20px 100px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* ==== CONTENIDO ==== */
+#banner-induccion .banner-content {
+  max-width: 900px;
+  margin: 0 auto;
+  animation: fadeInBanner 1.2s ease both;
+}
+
+#banner-induccion .banner-logo {
+  width: 90px;
+  height: auto;
+  margin-bottom: 10px;
+  filter: drop-shadow(0 0 6px rgba(106, 207, 199, 0.5));
+}
+
+#banner-induccion h1 {
+  color: #6ACFC7;
+  font-size: 2.6rem;
+  letter-spacing: 1px;
+}
+
+#banner-induccion p {
+  color: #EAEAEA;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-top: 10px;
+  opacity: 0.95;
+}
+
+/* Línea decorativa */
+#banner-induccion .banner-line {
+  width: 120px;
+  height: 4px;
+  background: #6ACFC7;
+  border-radius: 2px;
+  margin: 25px auto 0;
+  box-shadow: 0 0 12px rgba(106, 207, 199, 0.6);
+}
+
+/* ==== FONDO Y SECCIONES ==== */
+body.proyecto-bg {
+  background: linear-gradient(180deg, #0C1A1A 0%, #124B47 40%, #6ACFC7 100%);
+  background-attachment: fixed;
+  color: #EAEAEA;
+}
+
+/* ==== GALERÍA ==== */
+.gallery-section {
+  text-align: center;
+  background: rgba(12, 26, 26, 0.7);
+  border-radius: 18px;
+  padding: 50px 30px;
+  margin-bottom: 60px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(4px);
+}
+
+.gallery-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(106, 207, 199, 0.3);
+}
+
+.gallery-section h3 {
+  color: #6ACFC7;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid rgba(106, 207, 199, 0.3);
+  display: inline-block;
+  padding-bottom: 5px;
+}
+
+.gallery-img {
+  width: 100%;
+  max-width: 1100px;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  margin-top: 20px;
+}
+
+.gallery-img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 10px 40px rgba(106, 207, 199, 0.5);
+}
+
+/* ==== BOTÓN VOLVER ==== */
+.btn-glow {
+  border: 1px solid #6ACFC7;
+  color: #6ACFC7;
+  padding: 12px 30px;
+  border-radius: 12px;
+  transition: 0.3s;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 40px;
+  background: transparent;
+}
+
+.btn-glow:hover {
+  background: #6ACFC7;
+  color: #0C1A1A;
+  box-shadow: 0 0 20px rgba(106, 207, 199, 0.6);
+}
+
+/* ==== SECCIONES NUMERADAS ==== */
+.gallery-section {
+  text-align: center;
+  background: rgba(12, 26, 26, 0.7);
+  border-radius: 18px;
+  padding: 60px 40px;
+  margin: 70px auto;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  backdrop-filter: blur(4px);
+  max-width: 1150px;
+}
+
+.gallery-section:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(106, 207, 199, 0.3);
+}
+
+/* ==== TÍTULOS DE SECCIONES ==== */
+.gallery-section h3 {
+  position: relative;
+  color: #6ACFC7;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  margin-bottom: 30px;
+  display: inline-block;
+  padding-bottom: 8px;
+}
+
+.gallery-section h3::before {
+  content: attr(data-num) " ";
+  color: rgba(234, 234, 234, 0.6);
+  font-weight: 800;
+  margin-right: 8px;
+}
+
+.gallery-section h3::after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(90deg, #6ACFC7, transparent);
+  margin: 10px auto 0;
+  border-radius: 2px;
+  animation: moveLine 4s linear infinite;
+}
+
+/* Animación sutil para la línea */
+@keyframes moveLine {
+  0% { opacity: 0.3; transform: scaleX(0.5); }
+  50% { opacity: 1; transform: scaleX(1); }
+  100% { opacity: 0.3; transform: scaleX(0.5); }
+}
+
+/* ==== IMÁGENES ==== */
+.gallery-img {
+  width: 100%;
+  max-width: 1000px;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  margin-top: 20px;
+}
+
+.gallery-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 40px rgba(106, 207, 199, 0.5);
+}
+
+/* ==== DEGRADADO GLOBAL ==== */
+body.proyecto-bg {
+  background: linear-gradient(180deg, #0C1A1A 0%, #124B47 50%, #6ACFC7 100%);
+  background-attachment: fixed;
+  color: #EAEAEA;
+}
+
+
+/* 🔹 Botón volver (visibilidad y contraste mejorados) */
+.text-center {
+  text-align: center;
+}
+
+.btn-glow {
+  border: 2px solid #6ACFC7;
+  color: #6ACFC7;
+  padding: 14px 36px;
+  border-radius: 12px;
+  transition: 0.3s ease-in-out;
+  font-weight: 600;
+  display: inline-block;
+  background: transparent;
+  position: relative;
+  z-index: 10;
+  margin-top: 80px; /* mayor separación de la última imagen */
+}
+
+/* ==== BOTÓN VOLVER – ALTO CONTRASTE ==== */
+.btn-glow {
+  border: none;
+  color: #0C1A1A;
+  background: linear-gradient(90deg, #6ACFC7, #49A9A3);
+  font-weight: 600;
+  padding: 14px 38px;
+  border-radius: 12px;
+  transition: 0.3s ease-in-out;
+  display: inline-block;
+  box-shadow: 0 0 20px rgba(106, 207, 199, 0.3);
+  margin-top: 80px;
+}
+
+.btn-glow:hover {
+  background: linear-gradient(90deg, #7DF6EC, #6ACFC7);
+  box-shadow: 0 0 35px rgba(106, 207, 199, 0.6);
+  color: #0C1A1A;
+  transform: translateY(-2px);
+}
+
+/* ===== BOTÓN GLOW GLOBAL ===== */
+.btn-glow {
+  border: 2px solid #6ACFC7;
+  color: #6ACFC7;
+  background: transparent;
+  font-weight: 600;
+  padding: 14px 36px;
+  border-radius: 12px;
+  transition: 0.3s ease-in-out;
+  display: inline-block;
+  box-shadow: 0 0 10px rgba(106, 207, 199, 0.2);
+}
+
+.btn-glow:hover {
+  background: linear-gradient(90deg, #6ACFC7, #57A3D6);
+  color: #0C1A1A;
+  box-shadow: 0 0 25px rgba(106, 207, 199, 0.6);
+  transform: translateY(-2px);
+}
+
+/* ===== VARIANTE PARA PÁGINAS DE PROYECTO (fondo degradado oscuro) ===== */
+body.proyecto-bg .btn-glow {
+  border: none;
+  color: #0C1A1A;
+  background: linear-gradient(90deg, #6ACFC7, #49A9A3);
+  box-shadow: 0 0 20px rgba(106, 207, 199, 0.3);
+}
+
+body.proyecto-bg .btn-glow:hover {
+  background: linear-gradient(90deg, #7DF6EC, #6ACFC7);
+  color: #0C1A1A;
+  box-shadow: 0 0 35px rgba(106, 207, 199, 0.6);
+}
+/* Sección IA (estilo limpio como experiencia) */
+.ia-section {
+  background-color: #ffffff;
+}
+
+.ia-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+  border: 1px solid #e9e9e9;
+  transition: 0.3s;
+}
+
+.ia-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+  border-color: #6ACFC7;
+}
+
+.ia-card h5 {
+  color: #0C1A1A;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
